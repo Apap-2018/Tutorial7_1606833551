@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>500 Internal Server Error</title>
+</head>
+<body>
+	<h2>Internal Server Error, input tidak valid</h2>
+</body>
+</html>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{components/BasePage :: basepage}">
+<head>
+<title id="page-title">500 Internal Server Error</title>
+</head>
+<body>
+	<div id="Content" class="container-full-bg">
+		<h1 th:text="'Internal Server Error, input tidakvalid'"></h1>
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{components/BasePage :: basepage}">
+<head>
+<title id="page-title">404 Not found</title>
+</head>
+<body>
+	<h2>Halaman tidak ditemukan</h2>
+</body>
+</html>
