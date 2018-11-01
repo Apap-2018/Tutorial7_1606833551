@@ -7,5 +7,9 @@ import com.apap.tutorial7.model.FlightModel;
 
 @Repository
 public interface FlightDb extends JpaRepository<FlightModel, Long> {
+	void deleteByFlightNumber(String flightNumber);
+
+	FlightModel findByFlightNumber(String flightNumber);
+
 
 }

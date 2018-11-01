@@ -12,6 +12,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -41,6 +44,7 @@ public class PilotModel implements Serializable {
 	private int flyHour;
 	
 	@OneToMany(mappedBy = "pilot", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JsonIgnore
 	private List<FlightModel>pilotFlight;
 	
 	public long getId() {
